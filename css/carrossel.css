@@ -1,0 +1,206 @@
+.carrossel {
+  width: 100vw;
+   background-color: aqua;
+}
+
+.carrossel_titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 0em 0.5em 0em; 
+    font-family: var(--font-principal);
+    font-weight: 700;
+    font-size: 2em;
+    }
+
+
+.swiper {
+    width: 70%;  
+  } 
+
+.swiper-pagination {
+    position: initial;       
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+        display: none;
+        top: 60%;
+    }
+
+.card {
+  width: 40%; 
+  background: var(--branco);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 2em auto;  
+} 
+
+.card__descricao {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em; 
+  
+}
+
+.descricao__titulo {
+  color: var(--laranja);
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.descricao__titulo-livro {
+  color: var(--azul);
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+
+.descricao__texto {
+  font-size: 1.0em;
+}
+
+.descricao__imagem {
+  margin-top: 0.5em;
+}
+
+.card__botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botoes {
+  display: flex;
+  align-items: center; 
+}
+
+.botoes__item {
+  margin: 0 0.5em;
+}
+
+.botoes__ancora {
+  background-color: var(--laranja);
+  padding: 1em 2.2em;
+  color: var(--branco);
+  font-weight: 700;
+  text-decoration: none;
+  /* border-radius: 10px; */
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.botoes__ancora:active {
+  background-color: var(--azul);
+}
+
+.contato {
+  /* display: flex;
+  flex-direction: column;
+  margin-left: 2em; */
+  background-color: var(--branco);
+  padding: 2%;
+  border: 1px solid var(--azul);
+
+ 
+ }
+
+.contato__titulo, 
+.contato__texto {
+    color: var(--azul);
+    /* background: var(--azul-degrade);
+     */    
+}
+    
+
+.contato__titulo {
+  font-size: 1.5em;
+  
+}
+
+.contato__texto {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+.email {
+  /* margin-top: 2em;
+  background-color: transparent;
+  border-radius: 24px; 
+  padding: 1em;
+  width: 30%; */
+  padding: 1em;
+  border-radius: 24px;
+  width: 60%;
+}
+
+.email::placeholder {
+   font-family: var(--font-principal);
+   color: var(--azul);
+   background: url("../img/Email.svg") no-repeat;
+   padding-left: 2.2em;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .carrossel__titulo {
+      font-size: 1.6em;
+  }
+  .swiper-pagination {
+    margin: 2em 0 3em 0;
+  }
+  .swiper {
+    width: 60%;
+  }
+  .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: 60%;
+    }
+}
+@media screen and (min-width: 1728px) {
+  .carrossel__container {
+      display: flex;
+      align-items: center;
+      padding: 2%;  
+      margin-right: 2em;
+  }
+  .swiper-pagination {
+      margin: 1em 3em;
+  }
+
+  .swiper {
+      width: 50%;
+  }
+  .descricao__titulo {
+    font-size: 2.5em;
+  }
+  .descricao__titulo-livro {
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+  .descricao__texto {
+    font-size: 1.5em;
+  }
+  .card {
+    width: 40%;
+    margin-left: 3em;
+  }
+}
+/* Se fossemos fazer esse carrossel com HTML e CSS,
+ seria tão complicado que resultaria em um curso inteiro
+ vamos importar um plugin que vai fornecer para nós esse carrossel. 
+ O nome dele é SwiperJS
+ Acessando o site "swiperjs.com" pelo navegador e clicaremos no botão
+  "Get Started" (começar), na lateral esquerda. Nessa página, ele vai ensinar como iniciar.
+
+No menu da lateral esquerda, vamos clicar em "Use Swiper from CDN" (usar Swiper do CDN).
+ Nesta seção, o primeiro exemplo de código vai mostrar como adicionar o SwiperJS no nosso código.
+
+https://swiperjs.com/swiper-api#parameters   
+
+eralmente, usamos um botão para funções que acionam alguma função JavaScript e mudam algo na tela.
+ Quando a função é apenas de redirecionar, como no caso de um clique no "Saiba Mais",
+ a intenção é levar para uma página com descrição desse livro. Portanto, para isso usamos âncoras.
+*/ 

@@ -1,0 +1,195 @@
+.cabecalho_menu {
+    width: 1.5em;
+    height:1.5em;   /* 24px */ 
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+   }
+
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+     align-items: center;
+}
+
+.container__imagem {
+        padding: 1em;
+}
+
+
+.container__botao {
+    display: none;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+     
+}
+
+.container__botao:checked~.lista-menu {
+     display: block;
+}
+
+.lista-menu__titulo, .lista-menu__item {
+     padding: 1em;   
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo { 
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container_titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+.container__botao:checked~.container__rotulo>.cabecalho_menu{
+    background-image: url("../img/MenuAberto.svg");
+}
+
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
+/* -- para tablet --  */
+@media screen and (min-width: 1024px) {
+
+    .container_titulo, 
+    .container_titulo_negrito {
+        font-family: var(--font-sec);
+        font-size: 30px;
+             
+    }
+
+    .container_titulo {
+        font-weight: 400;
+        display: block;
+            }
+    
+    .container_titulo_negrito { 
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+        
+    }
+
+    .opcoes_item {
+        padding: 0 1em; 
+        text-transform: uppercase;
+    }
+
+    .opcoes_link {
+        text-decoration: none;
+        color: black; 
+       
+      }
+    
+    .container_imagem_trasnparente {
+        display: none;
+    } 
+
+    .cabecalho_menu {
+        display: none;
+    }
+       
+    .opcoes__botao:checked~.lista-menu {
+       display: block; 
+       width: auto;
+    }
+
+    .opcoes__botao {
+        display: none;
+    } 
+    
+    .opcoes__botao:checked~.container__rotulo>.opcoes_item {
+        background: var(--azul-degrade);
+        color: aliceblue;
+        padding: 0.5em 0.2em;
+    }
+    /*  foi verificar com os combinadores e a opção de classe de quando o input está com o checked. 
+    Ele vai procurar o rotulo e dentro vai encontrar 
+    nosso menu hambúrguer ou o menu de categoria. Vai alterar a cor de fundo e a cor da fonte. 
+    combinadores
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_selectors
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+    */
+}
+
+
+/* para monitor grande */
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);      
+    }
+    .cabecalho {
+        padding: 0 3em;
+    }
+    .container__texto {
+        display: block;
+    }
+    .opcoes {
+        margin-right: auto;
+    }
+}
+
+
+
+/* O position: relative nos permite inserir outros atributos como top, left, right e bottom, que são, respectivamente, 
+topo, esquerda, direita e baixo. 
+
+Já o position: absolute nos permite movimentar o elemento de acordo com outro que veio antes
+ ou que é o "pai", e que esteja em uma position diferente de "estática", que é a padrão.
+
+Queríamos que a lista se movesse de acordo com o cabeçalho, 
+que ficasse abaixo do cabeçalho. Por isso, inserimos um position: 
+relative no cabeçalho para que ficasse diferente de estática. Não vamos usar nenhuma das
+ propriedades liberadas para ele, mas queremos que ele fique diferente de "estático" para que o 
+ position: absolute da lista funcione.
+
+Assim, conseguimos movimentar a lista de acordo com o cabeçalho. Agora,
+ a lista já está acima dele, porque não inserimos mais nada. Mas agora vamos colocá-la abaixo.
+  Para isso, vamos inserir top: 100%.
+  Salvamos e, agora, a lista ficou abaixo do cabeçalho, ou seja, tiramos 100% do cabeçalho e 
+  ele ficou embaixo. Portanto, apenas inserimos o position: relative no cabeçalho para liberar 
+  o position: absolute e conseguirmos movimentar a lista totalmente para baixo do cabeçalho. 
+  
+  https://www.alura.com.br/artigos/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries*/

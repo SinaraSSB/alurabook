@@ -1,0 +1,59 @@
+@import url("./header.css");
+@import url("./banner.css");
+@import url("./carrossel.css");
+@import url("./topicos.css");
+@import url("./contato.css");
+@import url("./rodape.css");
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+
+:root {
+    --cor-de-fundo: wheat;
+    --branco: #FFFFFF; 
+    --laranja: #EB9B00; 
+    --azul: #002F52;
+    --cinza: #474646;
+    --cinza-claro: #858585;
+    --font-principal: "Poppins", sans-serif;
+    --font-dois: "Bungee Tint", sans-serif;
+    --font-tres: "Andika", sans-serif;
+    --fonte-sec: "Josefin Sans";
+    --azul-degrade: linear-gradient(#3d9ceb, #326589 , #002F52); 
+}
+/* 
+*{ 
+    margin: 0;     substitui pelo reset.css 
+    padding: 0;
+}  */
+
+body {
+     background-color: var(--branco);
+     
+     
+    }
+
+h2{
+    color: #EB9800;    
+}
+
+.rodape { 
+    padding: 10px;
+    /* color: var(--cor-cabecalho); */
+    background:var(--azul);
+    color: var(--branco);
+    text-align: center;
+    /*  position: absolute; fixa rodapé no fim pagina, mas se página grande conteudo fica em cima  */
+    /* position: fixed; */
+    /* bottom:0%; */
+    width: 100%; 
+}
+
+
+  /* @import url("styles/header.css"); 
+  Temos duas justificativas consistentes para escolher fazer desse jeito:
+
+  1 - Evitamos um excesso de link rel="stylesheet" no nosso index.html.
+  
+  2 - Não será necessário fazer um carregamento por vez. Tudo o que foi 
+  importado será carregado junto ao styles. Logo, o carregamento da página será muito mais rápido. */
